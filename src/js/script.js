@@ -30,4 +30,6 @@ function solveMaze(currentRow, currentCol) {
         solutionMatrix[currentRow][currentCol] = 0;
         return false;
     }
+        return false;
 }
+
