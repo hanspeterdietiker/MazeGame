@@ -67,3 +67,11 @@ function renderMaze() {
         }
     }
 }
+hasSolution = solveMaze(0, 0)
+
+if (hasSolution) {
+    console.log("Solucao encontrada")
+} else {
+    console.log("Solucao nao encontrada")
+}
+renderMaze();
