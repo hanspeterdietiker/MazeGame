@@ -7,6 +7,30 @@ body {
     margin: 20px;
     background-color: #fafafa;
   }
+  /* Ajustes para tablets (768px ou menos) */
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+    padding: 0 15px;
+  }
+  /* Exemplo: transforma um menu horizontal em vertical */
+  .menu {
+    flex-direction: column;
+  }
+}
+
+/* Ajustes para smartphones (480px ou menos) */
+@media (max-width: 480px) {
+  .header {
+    font-size: 1.2rem;
+  }
+  
+  /* Exemplo: esconde elementos não essenciais */
+  .sidebar {
+    display: none;
+  }
+}
+
   
   /* Título */
   h1 {
