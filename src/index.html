@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Maze Game</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Labirinto com Jogador Virtual</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <h1>Labirinto com Jogador Virtual e Backtracking</h1>
 
-<h1>Maze Game</h1>
-<div id="maze"></div>
+  <div id="controls">
+    <button id="btn-start">Gerar e Resolver</button>
+    <button id="btn-pause">Pausar</button>
+    <label for="speedRange">Velocidade:</label>
+    <input type="range" id="speedRange" min="50" max="1000" step="50" value="300" />
+    <span id="speedValue">300 ms</span>
+  </div>
 
-<script src="script.js"></script>
+  <div id="maze"></div>
+
+  <div id="legend">
+    <div class="legend-item">
+      <span class="legend-color legend-wall"></span> Parede
+    </div>
+    <div class="legend-item">
+      <span class="legend-color legend-path"></span> Caminho livre
+    </div>
+    <div class="legend-item">
+      <span class="legend-color legend-visited"></span> Caminho visitado
+    </div>
+    <div class="legend-item">
+      <span class="legend-color legend-backtrack"></span> Backtracking
+    </div>
+    <div class="legend-item">
+      <span class="legend-color legend-solution"></span> Caminho solução
+    </div>
+    <div class="legend-item">
+      <span class="legend-icon legend-start">🚪</span> Início
+    </div>
+    <div class="legend-item">
+      <span class="legend-icon legend-end">🏁</span> Fim
+    </div>
+    <div class="legend-item">
+      <span class="legend-icon legend-player">🤖</span> Jogador virtual
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

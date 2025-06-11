@@ -1,12 +1,176 @@
+/* Container geral para centralizar o conteúdo */
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.maze {
+    margin: 20px;
+    background-color: #fafafa;
+  }
+  
+  /* Título */
+  h1 {
+    margin-bottom: 10px;
+  }
+  
+  /* Área dos controles */
+  #controls {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Labirinto */
+  #maze {
     display: grid;
     gap: 2px;
-    margin-top: 20px;
+    user-select: none;
     justify-content: center;
-}
+    border: 2px solid #333;
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 6px;
+  }
+  
+  /* Cada célula do labirinto */
+  .cell {
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 20px;
+    position: relative;
+    border-radius: 2px;
+  }
+  
+  /* Paredes pretas */
+  .wall {
+    background-color: black;
+  }
+  
+  /* Caminho claro */
+  .path {
+    background-color: #eee;
+  }
+  
+  /* Visitado - azul claro */
+  .visited {
+    background-color: #cce5ff;
+  }
+  
+  /* Backtrack - vermelho claro */
+  .backtrack {
+    background-color: #f8d7da;
+  }
+  
+  /* Solução - verde claro */
+  .solution {
+    background-color: #90ee90;
+  }
+  
+  /* Início */
+  .start {
+    font-weight: bold;
+    color: darkgreen;
+  }
+  
+  /* Fim */
+  .end {
+    font-weight: bold;
+    color: darkred;
+  }
+  
+  /* Jogador */
+  .player {
+    font-size: 18px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Setas de direção */
+  .arrow {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    font-size: 12px;
+    color: #333;
+    pointer-events: none;
+    user-select: none;
+    font-weight: bold;
+  }
+  
+  /* Legenda container */
+  #legend {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    font-size: 14px;
+  }
+  
+  /* Itens da legenda */
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    min-width: 130px;
+  }
+  
+  /* Caixa colorida na legenda */
+  .legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid #999;
+    display: inline-block;
+    position: relative;
+  }
+  
+  /* Ícones específicos para legenda */
+  .legend-icon {
+    font-size: 20px;
+    line-height: 20px;
+    display: inline-block;
+  }
+  
+  /* Cores da legenda */
+  .legend-wall {
+    background-color: black;
+  }
+  
+  .legend-path {
+    background-color: #eee;
+  }
+  
+  .legend-visited {
+    background-color: #cce5ff;
+  }
+  
+  .legend-backtrack {
+    background-color: #f8d7da;
+  }
+  
+  .legend-solution {
+    background-color: #90ee90;
+  }
+  
+  .legend-start {
+    color: darkgreen;
+    font-weight: bold;
+  }
+  
+  .legend-end {
+    color: darkred;
+    font-weight: bold;
+  }
+  
+  .legend-player {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  
